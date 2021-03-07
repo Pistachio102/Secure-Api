@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "6f0893b3-f248-44cc-a6c2-3857666542ef",
+		"name": "jwt-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/protected",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxNTEzOTk5OCwianRpIjoiN2Q2MGE2NDItNDY0Zi00MDE0LWJjOWUtMThhZTg5OGI0NTczIiwibmJmIjoxNjE1MTM5OTk4LCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiZXllbnVrIiwiZXhwIjoxNjE1MTQwODk4fQ.V4VMZwjWEwRFH8y7XdmOiOX99DN36IeAPkPp7TyTbN4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/protected",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"eyenuk\",\n    \"password\":\"eyenuk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file-upload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxNTEzOTk5OCwianRpIjoiN2Q2MGE2NDItNDY0Zi00MDE0LWJjOWUtMThhZTg5OGI0NTczIiwibmJmIjoxNjE1MTM5OTk4LCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiZXllbnVrIiwiZXhwIjoxNjE1MTQwODk4fQ.V4VMZwjWEwRFH8y7XdmOiOX99DN36IeAPkPp7TyTbN4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ref_no",
+							"value": "154655542",
+							"type": "text"
+						},
+						{
+							"key": "file[]",
+							"type": "file",
+							"src": [
+								"/home/maruf/Desktop/WhatsApp Image 2021-01-30 at 4.59.00 PM.jpeg",
+								"/home/maruf/Desktop/stcpay-WU-50054905.pdf",
+								"/home/maruf/Desktop/IMG_0385.JPG",
+								"/home/maruf/Desktop/panoramio-39257389.jpg",
+								"/home/maruf/Desktop/WhatsApp Image 2021-01-31 at 1.15.48 PM.jpeg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
