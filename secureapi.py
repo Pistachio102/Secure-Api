@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
-from flask_jwt_simple import (
-    JWTManager, jwt_required, create_jwt, get_jwt_identity
-)
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
+
 from werkzeug.utils import secure_filename
 import os
 
@@ -45,20 +44,21 @@ def login():
         return jsonify({"msg": "Bad username or password"}), 401
 
     # Identity can be any data that is json serializable
-    ret = {'jwt': create_jwt(identity=username)}
-    return jsonify(ret), 200
+    access_token = {'jwt': create_access_token(identity=username)}
+    return jsonify(access_token), 200
 
 
 # Protect a view with jwt_required, which requires a valid jwt
 # to be present in the headers.
+
 @app.route('/protected', methods=['GET'])
-@jwt_required
+@jwt_required()
 def protected():
     # Access the identity of the current user with get_jwt_identity
     return jsonify({'user': get_jwt_identity()}), 200
 
 @app.route("/upload", methods=["POST"])
-@jwt_required
+@jwt_required()
 def upload():
     ref_no = request.form['ref_no']
     uploaded_files = request.files.getlist('file[]')
