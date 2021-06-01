@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <h1>Two Factor Authentication Setup</h1>
+    <p>You are almost done! Please start OTPGenerator app on your smartphone and scan the following QR Code with it: | OR Run the otp generator script with the QR code visible on the screen </p>
+    <p>If you don't have a otp generator in your phone, please install Google Authenticator from 
+    <a href="https://apps.apple.com/us/app/google-authenticator/id388497605">iTunes</a>
+    | <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Play</a></p>
+    <p><img id="qrcode" src="{{ url_for('qrcode') }}"></p>
+    <p>I scanned the secret code , take me to the <a href="/login?target_uri=/">Login</a> page!</p>
+{% endblock %}

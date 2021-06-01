@@ -1,0 +1,20 @@
+Patient ID: 3 Referring Location: Saudi Development Med
+Patient Name: 3 Referring Provider: Selwa Al-Hazzaa
+Date of Birth: Unspecified Encounter ID: Unspecified
+Gender: Unspecified EyeArt Control ID: 157235
+HbAic Level: Unspecified Dilation Status: Dilated
+Visual Acuity: Unspecified Exam Analysis Date: 2020-Jul-07 18:52
+Positive for vision-threatening diabetic retinopathy.
+Right Eye: No apparent signs of DR detected [0.0] Left Eye: Signs of Severe NPDR [3.0] detected
+Macula Centered Macula Centered
+ONH Centered ONH Centered
+*Do not use the above thumbnail images for diagnostic purposes.
+Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema,
+E11.3492
+left eye
+A positive result for vision-threatening diabetic retinopathy indicates a high risk for severe non-proliferative
+DR, proliferative DR, or markers for potentially sight-threatening DME.
+Recommended referral to an eye care professional for evaluation, per national guidelines and/or ICO
+Guidelines for Diabetic Eye Care (2017).
+ai
+ID:3 | NAME:3 | DOB: Unspecified v2.1.0rev103re

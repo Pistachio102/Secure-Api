@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SDM-AI Retinopathy Applications</title>
+
+  <link rel="stylesheet" href="/static/css/all.css">
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <style>
+      /* Darker background on mouse-over */
+      .btn:hover {
+          background-color: RoyalBlue;
+      }
+  </style>
+
+</head>
+
+<script>
+  var loadFile1 = function (event) {
+
+      var lbl=document.getElementById('lbl_file1');
+
+      lbl.innerText=event.target.files[0].name;
+  };
+
+  var loadFile2 = function (event) {
+
+      var lbl=document.getElementById('lbl_file2');
+
+      lbl.innerText=event.target.files[0].name;
+  };
+
+  var loadFile3 = function (event) {
+
+      var lbl=document.getElementById('lbl_file3');
+
+      lbl.innerText=event.target.files[0].name;
+  };
+
+  var loadFile4 = function (event) {
+
+      var lbl=document.getElementById('lbl_file4');
+
+      lbl.innerText=event.target.files[0].name;
+  };
+
+</script>
+<body style="background-color: black;margin: 0; height: 100%; overflow: hidden;">
+  <header>
+      <!-- Fixed navbar -->
+      <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding: 0px;">
+          <a class="navbar-brand" href="/" style="padding: 0px;"><img src="/static/images/logo.png" alt="sdm" style="max-width: 30%;
+            height: auto;margin-left: 0px; margin-right: auto;"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/eye_image_upload">Upload</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                  </li>
+
+              </ul>
+              <a class="btn btn-outline-success my-2 my-sm-0" href="/logout">Logout</a>
+
+          </div>
+      </nav>
+  </header>
+  <!-- Begin page content -->
+  <main role="main" class="container-fluid" style="padding-top: 0px;padding-left: 0px;padding-right: 0px;  height: 100%;">
+    <div class="row" style="padding-top: 100px;">
+      <div class="col-sm-12" style=" text-align: center; padding-bottom: 50px;">
+          <h1 class="mt-5" style="color: rgb(241, 238, 238);">Upload Eye Images</h1>
+          <p class="lead" style="color: rgb(200, 200, 200);">Please select and upload Fundus Image files</p>
+      </div>
+      <div class="col-sm-3" style=" text-align: center;"></div>
+      <div class="col-sm-6" style=" text-align: center;">
+        <form method=post enctype=multipart/form-data>
+            <div class="input-group" style="text-align:center; padding-bottom: 20px;">
+                  <input style="height: 35px;margin:0px auto; display:block;" type="text" name="patientName" id="patientName" placeholder="Enter patient's name" value="" required>
+            </div>
+            <table class="lead" style="width: 100%; color: rgb(200, 200, 200);"><tr><td >Left Eye Images</td><td>Right Eye Images</td></tr></table>
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" name="file_L1" accept=".jpeg, .png, .jpg" onchange="loadFile1(event, 0)"
+                        class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01" id="lbl_file1">Choose Left Eye Image 1</label>
+                </div>
+                <div class="custom-file" style="padding-right: 10px;">
+                    <input type="file" name="file_R1" accept=".jpeg, .png, .jpg" onchange="loadFile3(event, 2)"
+                        class="custom-file-input" id="inputGroupFile03"
+                        aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01" id="lbl_file3">Choose Right Eye Image 1</label>
+                </div>
+                
+            </div>
+  
+            <div class="input-group" style="padding-top: 10px;">
+                <div class="custom-file">
+                    <input type="file" name="file_L2" accept=".jpeg, .png, .jpg" onchange="loadFile2(event, 1)"
+                        class="custom-file-input" id="inputGroupFile02"
+                        aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01" id="lbl_file2">Choose Left Eye Image 2</label>
+                </div>
+                
+  
+                <div class="custom-file" style="padding-left: 10px;">
+                    <input type="file" name="file_R2" accept=".jpeg, .png, .jpg" onchange="loadFile4(event, 3)"
+                        class="custom-file-input" id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01" id="lbl_file4">Choose Right Eye Image 2</label>
+  
+                </div>
+            </div>
+            <p></p>
+                <button type="submit" class="btn btn-primary btn-small">Upload</button>
+        </form>
+      </div>
+      <div class="col-sm-3" style=" text-align: center;"></div>
+
+      
+
+      <div class="col-sm-4"></div>
+      {% if errorMsg %}
+        <div class="col-sm-12" style=" text-align: center;">
+          <p class="lead" style="color: red;">{{ errorMsg }}</p>
+
+        </div>
+      {% endif %}
+
+  </div>
+
+  </main>
+  <footer class="footer" style="background-color: rgb(14, 14, 14);">
+      <div class="container" style="text-align: center;">
+          <span class="text-muted">@ SAUDI DEVELOPMENT MED (SDM)</span>
+      </div>
+  </footer>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/static/js/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

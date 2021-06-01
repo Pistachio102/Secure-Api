@@ -1,0 +1,53 @@
+{
+    "positive": {
+        "summary_eng": "Positive for Vision Threatening Diabetic Retinopathy",
+        "summary_arabic": "إيجابي لتهديد الرؤيه بسبب إعتلال الشبكية السكري",
+        "followup_eng": "Urgent referral to an Eye care professional for evaluation of vision threatening diabetic retinopathy per International Council of Ophthalmology (ICO) guidelines for Diabetic Eye Care",
+        "followup_arabic": "يوصى بالإحالة العاجلة إلى طبيب العيون المختص لتقييم اعتلال الشبكية السكري الذي يهدد الرؤية وفقًا لإرشادات المجلس الدولي لطب العيون للعناية بداء سكري العين"
+    },
+    "negative": {
+        "summary_eng": "Negative for Vision Threatening Diabetic Retinopathy",
+        "summary_arabic": "سلبي لتهديد الرؤيه بسبب إعتلال الشبكية السكري",
+        "follow_up":{
+
+            "common_eng": "Recommended scheduling of retinal imaging follow-up, per International Council of Ophthalmology (ICO) Guidelines for Diabetic Eye Care",
+            "common_arabic": "الجدول الزمني الموصي به لمتابعة تصوير الشبكية، وفقًا لإرشادات المجلس الدولي لطب العيون لرعاية داء سكري العين",
+            "m_12": {
+                "english" : "within 12 months",
+                "arabic" : "في غضون ١٢ شهرًا"
+            },
+            "m_09": {
+                "english" : "within 9 months",
+                "arabic" : "في غضون ٩ شهرًا"
+            },
+            "m_06": {
+                "english" : "within 6 months",
+                "arabic" : "في غضون ٦ شهرًا"
+            },
+            "m_03": {
+                "english" : "within 3 months",
+                "arabic" : "في غضون ٣ شهرًا"
+            }
+        }
+        
+    },
+    "ungradable": {
+        "summary_eng": "Exam quality is insufficient",
+        "summary_arabic": "جودة التصوير غير كافية",
+        "followup_eng": "Recommended referral to an Eye care professional for evaluation to safely rule out the presence of diabetic retinopathy per International Council of Ophthalmology (ICO) guidelines for Diabetic Eye Care",
+        "followup_arabic": "يوصى بالإحالة الي طبيب العيون المختص لعدم القدرة لتقيم الصورلاستبعاد وجود اعتلال الشبكية السكري بأمان وفقا لإرشادات المجلس الدولي لطب العيون لرعاية داء سكري العين"
+    },
+    "general_msg": {
+        "english": "As per International Diabetes Federation (IDF) Eye Health: A guide for health care professionals emphasize the importance of controlling blood glucose, blood lipids and blood pressure as well the importance of regular eye exams regardless of whether visual symptoms are present or absent",
+        "arabic": "وفقًا للاتحاد الدولي السكري لصحة العين: يؤكد الدليل لأخصائي الرعاية الصحية على أهمية التحكم في نسبة السكري في الدم ونسبه الدهون في الدم والتحكم في ضغط الدم بالإضافة إلى أهمية الفحص الدوري للعين بغض النظر إذا كانت الأعراض البصرية موجودة أو غائبة"
+    },
+
+    "report_type":{
+        "english":"DIABETIC RETINOPATHY FOLLOW UP SUMMARY",
+        "arbic":"ملخص متابعة اعتلال الشبكية السكري"
+    },
+    "coding":{
+        "english":"ICD-10 Coding",
+        "arabic":"الترميز بالتصنيف الدولي العاشر للامراض"
+    }
+}

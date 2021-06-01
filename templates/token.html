@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+page_content %}
+<h1>Token</h1>
+<p>Please enter the otp token.</p>
+<br />
+
+{{ wtf.quick_form(form) }}
+<br />
+<p>Forgot to scan QR-code for 2FA setup? <a href="/twofactor">Click Here</a></p>
+
+{% endblock %}
